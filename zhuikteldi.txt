@@ -1,1 +1,21 @@
+    "adam",
+    "uoimir",
+    "abaj",
+    "bjik",
+    "bilim",
+    "kitap",
+    "zhjnalys",
+    "sypajy",
+    "ghylym",
+    "adygn"
 
+    "baruu"
+    "keluu",
+    "ajtuu",
+    "ketuu",
+    "zhuiruu",
+    "turuu",
+    "zhatuu",
+    "kuoiruu",
+    "estuu",
+    "qarauu"
