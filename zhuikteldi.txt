@@ -18,3 +18,5 @@
     "kuoiruu",
     "estuu",
     "qarauu"
+
+abajlauu
