@@ -82,3 +82,4 @@ suoindiruu
 syzuu 
 tasuu 
 teruu 
+tisteuu 
