@@ -1,27 +1,10 @@
-    "adam",
-    "uoimir",
-    "abaj",
-    "bjik",
-    "bilim",
-    "kitap",
-    "zhjnalys",
-    "sypajy",
-    "ghylym",
-    "adygn"
-
-    "baruu"
-    "keluu",
-    "ajtuu",
-    "ketuu",
-    "zhuiruu",
-    "zhatuu",
-    "kuoiruu",
-    "estuu",
-    "qarauu"
-
-abajlauu
+abaj 
+abajlauu 
+adam 
+adygn 
 ajalauu 
-ajauu
+ajauu 
+ajtuu 
 aluu 
 alystatuu
 alystauu
@@ -44,18 +27,27 @@ auulauu
 azhyratuu
 baghuu 
 bajqauu 
+baruu 
 basuu 
 batuu
 bejimdeuu 
 bekituu 
 beriluu 
 beruu 
+bilim 
+bjik 
 bjleuu 
-buruu
-jteruu
-kesuu
+buruu 
+estuu 
+ghylym 
+jteruu 
+keluu 
+kesuu 
+ketuu 
+kitap 
 kjuu
 kuiluu 
+kuoiruu 
 kuoishiruu
 mojyndauu
 oquu
@@ -63,6 +55,7 @@ otyruu
 qajtuu 
 qalauu 
 qamauu 
+qarauu 
 qashuu 
 qazuu 
 qojuu 
@@ -79,6 +72,7 @@ shoshuu
 soghuu 
 sozuu
 suoindiruu 
+sypajy 
 syzuu 
 tasuu 
 teruu 
@@ -92,6 +86,7 @@ tuoizuu
 turuu 
 tygndauu 
 uijrenuu 
+uoimir 
 uoishiruu 
 uruu 
 ushuu 
@@ -100,10 +95,13 @@ zhabuu
 zhaghuu 
 zharuu 
 zhasauu 
+zhatuu 
 zhazuu 
 zhegniluu 
 zhegnuu 
 zhetuu 
 zheuu 
+zhjnalys 
 zhuigiruu 
+zhuiruu 
 zhyghuu 
