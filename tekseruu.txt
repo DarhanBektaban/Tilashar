@@ -1,6 +1,1 @@
-ana
-ata
-dos
-jne
-shara
-zhajly
+
