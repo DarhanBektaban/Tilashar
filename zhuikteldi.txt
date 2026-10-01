@@ -134,6 +134,7 @@ atastyruu
 atauu
 atuu
 auua
+auudan
 auudaruu
 auula
 auulauu
@@ -404,6 +405,7 @@ kuituu
 kuoibejtuu
 kuoigeruu
 kuoignil
+kuoiktem
 kuoimek
 kuoimuu
 kuoirinis
@@ -412,6 +414,7 @@ kuoirkejuu
 kuoirsetuu
 kuoirshi
 kuoiruu
+kuoishe
 kuoishiruu
 kuoishuu
 kuoiteruu
@@ -694,6 +697,7 @@ tatuu
 tauu
 tazalauu
 tegisteuu
+tegniz
 terleuu
 teruu
 tili
