@@ -1,0 +1,70 @@
+name: Update Dictionary and Find New Words
+
+on:
+  push:
+    paths:
+      - 'zhagna.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  process-words:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Python script to diff and merge
+        run: |
+          python3 - << 'EOF'
+          import os
+
+          zhagna_file = "zhagna.txt"
+          main_file = "zhuikteldi.txt"
+          check_file = "tekseruu.txt"
+
+          # 1. zhuikteldi.txt bar bolsa oqymyz
+          main_words = set()
+          if os.path.exists(main_file):
+              with open(main_file, "r", encoding="utf-8") as f:
+                  main_words = set(line.strip() for line in f if line.strip())
+
+          # 2. zhagna.txt ishinen oqymyz
+          new_input_words = set()
+          if os.path.exists(zhagna_file):
+              with open(zhagna_file, "r", encoding="utf-8") as f:
+                  new_input_words = set(line.strip() for line in f if line.strip())
+
+          if not new_input_words:
+              print("zhagna.txt bos nemese tabylmady.")
+              exit(0)
+
+          # 3. zhuikteldi.txt ishinde ÁLI KEZDESPEGEN sózder (Difference)
+          truly_new_words = sorted(list(new_input_words - main_words))
+
+          # 4. tekseruu.txt fajlyna tek jańadan tabylǵandardy jazyp shyǵamyz
+          with open(check_file, "w", encoding="utf-8") as f:
+              for word in truly_new_words:
+                  f.write(word + "\n")
+
+          # 5. zhuikteldi.txt tizimin barlyq jańa sózben tolyqtyryp, álipby retimen jazamyz
+          all_words = sorted(list(main_words.union(new_input_words)))
+          with open(main_file, "w", encoding="utf-8") as f:
+              for word in all_words:
+                  f.write(word + "\n")
+
+          # 6. zhagna.txt kelesi retke taza bolu úshin bosatamyz
+          open(zhagna_file, "w", encoding="utf-8").close()
+
+          print(f"Jalpy jańadan qosylǵan sóz sany: {len(truly_new_words)}")
+          print(f"Barlyq sóz sany: {len(all_words)}")
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add zhuikteldi.txt tekseruu.txt zhagna.txt
+          git diff --staged --quiet || (git commit -m "Auto: Update zhuikteldi.txt and generated tekseruu.txt" && git push)
