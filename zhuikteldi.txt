@@ -1,6 +1,7 @@
 abaj
 abajlauu
 abyroj
+abyrojly
 abyrzhuu
 abysyn
 adam
@@ -183,6 +184,7 @@ bauuyr
 bauuyrlas
 bedel
 bedeldi
+bejbit
 bejbitshilik
 bejimdeluu
 bejimdeuu
@@ -419,6 +421,7 @@ otyruu
 pajda
 parasat
 paryz
+perzent
 qadaghalauu
 qadam
 qadamdauu
@@ -703,6 +706,7 @@ ushuu
 ustauu
 uulauu
 yqylas
+yrys
 zagn
 zagndy
 zagndylyq
