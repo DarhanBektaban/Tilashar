@@ -19,6 +19,7 @@ alystatuu
 alystauu
 alysuu
 amandasuu
+ana
 anyqtauu
 aparuu
 aqtauu
@@ -36,6 +37,7 @@ ashuu
 asuu
 asyrauu
 asyruu
+ata
 atameken
 atastyruu
 atauu
@@ -103,6 +105,7 @@ dajyndauu
 daryn
 densauulyq
 dogharuu
+dos
 dostyq
 duinje
 egin
@@ -127,6 +130,7 @@ guildeuu
 is
 jgilik
 jgilikti
+jne
 jteruu
 kelisuu
 keluu
@@ -281,6 +285,7 @@ shaghuu
 shaghymdanuu
 shaluu
 shaqyruu
+shara
 sharshatuu
 sharshauu
 sheginuu
@@ -400,6 +405,7 @@ zhabuu
 zhaghuu
 zhagnartuu
 zhagnaruu
+zhajly
 zhajuu
 zhaldauu
 zhalghauu
