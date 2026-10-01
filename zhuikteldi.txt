@@ -162,7 +162,6 @@ bejne
 bejnet
 bejtanys
 bekituu
-bel
 belbeuu
 beles
 belgi
@@ -176,7 +175,6 @@ bergizuu
 beriluu
 beruu
 bet
-bilezik
 bilikti
 bilim
 bilimdi
@@ -221,20 +219,17 @@ dairiger
 dairipteuu
 dairuumen
 daistuir
-daiuuir
 daiuulet
 dajyndauu
 daryn
 dauuyl
 degngej
-dem
 demalys
 demeuu
 densauulyq
 derek
 derekti
 dogharuu
-dop
 dos
 dostyq
 duibir
@@ -663,7 +658,6 @@ zhalghan
 zhalghauu
 zhalyn
 zhalyndy
-zhamaghat
 zhamyluu
 zhanashyr
 zhankuijer
@@ -719,7 +713,6 @@ zhetkizuu
 zhetuu
 zheuu
 zhiger
-zhjhaz
 zhjnaluu
 zhjnalys
 zhjnauu
