@@ -25,41 +25,48 @@ jobs:
           main_file = "zhuikteldi.txt"
           check_file = "tekseruu.txt"
 
-          # 1. zhuikteldi.txt bar bolsa oqymyz
-          main_words = set()
-          if os.path.exists(main_file):
-              with open(main_file, "r", encoding="utf-8") as f:
-                  main_words = set(line.strip() for line in f if line.strip())
+          def read_clean_words(filename):
+              if not os.path.exists(filename):
+                  return set()
+              # 'utf-8-sig' arqyly jasyryn BOM belgisin birden qyryp tastajmyz
+              with open(filename, "r", encoding="utf-8-sig") as f:
+                  words = set()
+                  for line in f:
+                      # .strip() barlyq probel, tab, \r, \n tańbalaryn tazartady
+                      cleaned = line.strip().lower()
+                      if cleaned:
+                          words.add(cleaned)
+                  return words
 
-          # 2. zhagna.txt ishinen oqymyz
-          new_input_words = set()
-          if os.path.exists(zhagna_file):
-              with open(zhagna_file, "r", encoding="utf-8") as f:
-                  new_input_words = set(line.strip() for line in f if line.strip())
+          # 1. Bar sózderdi oqyp alamyz
+          main_words = read_clean_words(main_file)
+
+          # 2. Jańa kelgen sózderdi oqyp alamyz
+          new_input_words = read_clean_words(zhagna_file)
 
           if not new_input_words:
               print("zhagna.txt bos nemese tabylmady.")
               exit(0)
 
-          # 3. zhuikteldi.txt ishinde ÁLI KEZDESPEGEN sózder (Difference)
+          # 3. zhuikteldi.txt ishinde SHYNYMEN joq sózder
           truly_new_words = sorted(list(new_input_words - main_words))
 
-          # 4. tekseruu.txt fajlyna tek jańadan tabylǵandardy jazyp shyǵamyz
+          # 4. tekseruu.txt fajlyna tek jańa sózderdi jazamyz
           with open(check_file, "w", encoding="utf-8") as f:
               for word in truly_new_words:
                   f.write(word + "\n")
 
-          # 5. zhuikteldi.txt tizimin barlyq jańa sózben tolyqtyryp, álipby retimen jazamyz
+          # 5. zhuikteldi.txt fajlyna qosyp, alfavıtpen rettep jazamyz
           all_words = sorted(list(main_words.union(new_input_words)))
           with open(main_file, "w", encoding="utf-8") as f:
               for word in all_words:
                   f.write(word + "\n")
 
-          # 6. zhagna.txt kelesi retke taza bolu úshin bosatamyz
+          # 6. zhagna.txt fajlyn taza qaldyramyz
           open(zhagna_file, "w", encoding="utf-8").close()
 
-          print(f"Jalpy jańadan qosylǵan sóz sany: {len(truly_new_words)}")
-          print(f"Barlyq sóz sany: {len(all_words)}")
+          print(f"Anyqtalǵan jańa sózder sany: {len(truly_new_words)}")
+          print(f"Barlyq sózder sany: {len(all_words)}")
           EOF
 
       - name: Commit and push changes
