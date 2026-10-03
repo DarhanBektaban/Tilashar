@@ -138,6 +138,7 @@ ajdauu
 ajdyn
 ajdyndy
 ajghaq
+ajghyr
 ajlakerlik
 ajlyq
 ajmaq
@@ -256,6 +257,7 @@ arnauu
 arnauuly
 arqalauu
 arqauu
+arsha
 arsyz
 arsyzdyq
 artuu
@@ -274,6 +276,7 @@ aryz
 arzan
 arzandyq
 arzanshylyq
+asatajaq
 ashuu
 ashylghan
 ashyluu
@@ -285,6 +288,7 @@ aspandauu
 aspap
 aspaz
 asqaqtauu
+astauu
 astyq
 astyrtyndyq
 asuu
@@ -312,6 +316,7 @@ atqysh
 attastyruu
 atuu
 atyrap
+atzhalman
 auua
 auudan
 auudarmashylyq
@@ -352,6 +357,7 @@ azyqtandyruu
 babalyq
 bagha
 baghalauu
+baghan
 baghban
 baghdar
 baghdarlama
@@ -378,6 +384,7 @@ bajandauushy
 bajauu
 bajauulyq
 bajghus
+bajghyz
 bajlanys
 bajlanysty
 bajlauu
@@ -427,6 +434,7 @@ barmaq
 barmaqtaj
 barmaqtyq
 barsha
+barshyn
 baruu
 baspa
 baspahana
@@ -551,6 +559,7 @@ bj
 bjazy
 bjazylyq
 bjdaj
+bje
 bjik
 bjikke
 bjiktetuu
@@ -571,6 +580,7 @@ bolys
 bolysuushy
 bolzham
 bolzhauu
+bor
 boran
 borandy
 borsyq
@@ -594,6 +604,7 @@ buiginnen
 buijrek
 buikil
 builinuu
+buirge
 buirkenshik
 buirkit
 buirkitshi
@@ -606,6 +617,7 @@ bujryqty
 bujym
 bujyruu
 bula
+bulagn
 bulaq
 bulaqtaj
 buldyr
@@ -613,6 +625,7 @@ bult
 bultartpas
 bulygnghyrlyq
 bulzhymas
+buoidene
 buoigelmesten
 buoigesin
 buoiget
@@ -624,10 +637,13 @@ buoilim
 buoilis
 buoilme
 buoilshek
+buoiltirik
 buoiri
 buoirik
+buoirte
 buoiten
 burmalauu
+burshaq
 buruu
 buryluu
 burylys
@@ -723,6 +739,7 @@ dinj
 djqan
 dogharuu
 domalaq
+dombyra
 dop
 dos
 dostyq
@@ -737,12 +754,15 @@ duinje
 duinjetanym
 duinjezhuizi
 duirkin
+duiz
 duoigngelek
 duoigngelenuu
+duoinen
 duoireki
 duoirekilik
 durys
 durystyq
+duuadaq
 eden
 egde
 egemendik
@@ -804,6 +824,7 @@ ertegi
 ertegn
 ertegngi
 ertegngilik
+esek
 esen
 esep
 esepshi
@@ -812,6 +833,7 @@ esepteuuish
 esepti
 esh
 eshbir
+eshki
 eshkim
 eshqashan
 eshtegne
@@ -862,6 +884,7 @@ guildenuu
 guildeuu
 hatshy
 hattama
+ingen
 irikteuu
 is
 ishek
@@ -881,6 +904,7 @@ jne
 jrek
 jt
 jtajaq
+jtelgi
 jteruu
 kairi
 kelisim
@@ -950,10 +974,12 @@ mairtebe
 mairttik
 maisele
 maitin
+maiuue
 maiz
 maj
 majlauu
 majly
+majmyl
 mal
 malshy
 maman
@@ -964,6 +990,7 @@ maqsatty
 maqta
 maqtanysh
 maquldauu
+maral
 marapat
 mastanuu
 mazalauu
@@ -989,6 +1016,7 @@ min
 mindet
 mindetteme
 mindetti
+mingish
 minsiz
 mj
 mojyndauu
@@ -996,6 +1024,7 @@ mugn
 mugnly
 muidde
 muijiz
+muik
 muilik
 muimkindik
 muishe
@@ -1034,6 +1063,7 @@ negizgi
 neke
 nemere
 njet
+noqta
 nuoiser
 nur
 nurly
@@ -1081,6 +1111,7 @@ oryndy
 orynsyz
 oshaq
 otan
+otauu
 otyn
 otyruu
 pajda
@@ -1098,9 +1129,11 @@ pikir
 pikirtalas
 pishin
 pyshaq
+qaban
 qabaq
 qabat
 qabyldauu
+qabyq
 qabyrgha
 qadaghalauu
 qadam
@@ -1129,6 +1162,7 @@ qajmaq
 qajnar
 qajnatuu
 qajnauu
+qajraq
 qajrat
 qajratker
 qajratty
@@ -1154,6 +1188,7 @@ qalam
 qalamger
 qalampyr
 qalaq
+qalaqaj
 qalarlyq
 qalashyq
 qalauu
@@ -1244,6 +1279,7 @@ qattylyq
 qatuu
 qatysuu
 qatysuushy
+qauugha
 qauuip
 qauuipsiz
 qauuipsizdik
@@ -1268,6 +1304,7 @@ qazylar
 qazyna
 qazynaly
 qazyq
+qj
 qjal
 qjaldauu
 qjalj
@@ -1284,10 +1321,12 @@ qjsap
 qjuu
 qjyn
 qjyndyq
+qjyrshyq
 qobyz
 qogham
 qognyr
 qognyrauu
+qognyz
 qoj
 qojan
 qojshy
@@ -1316,11 +1355,13 @@ qozdyruu
 qozghaltqysh
 qozghalys
 qozghauu
+qozy
 qubylys
 qudiret
 qudyq
 qujma
 qujuu
+qulan
 qulaq
 qulauu
 qulpynaj
@@ -1340,6 +1381,7 @@ quqyqtyq
 qur
 qural
 quraq
+qurbaqa
 qurby
 qurmet
 qurt
@@ -1359,16 +1401,21 @@ quuuu
 quzhat
 quzyret
 qydyruu
+qyl
+qylsha
 qylysh
 qymbat
+qymyran
 qymyz
 qyna
 qyran
+qyrghj
 qyryq
 qyryqqabat
 qys
 qysha
 qysqa
+qystauu
 qysuu
 qysym
 qyz
@@ -1393,6 +1440,8 @@ retteuu
 rettik
 ruuh
 ruuhanj
+saba
+sabauu
 sabyn
 sabyr
 sabyrly
@@ -1455,6 +1504,7 @@ sarapshy
 sarbaz
 sardar
 sarqyrama
+sarshunaq
 sary
 sarymsaq
 saryzhajlauu
@@ -1466,6 +1516,7 @@ sauuatty
 sauuda
 sauudager
 sauulyq
+sauuysqan
 sauuyt
 saz
 sazger
@@ -1481,6 +1532,7 @@ sergeldegn
 seri
 serik
 seriktes
+serke
 sezim
 sezimdi
 sezimtal
@@ -1488,12 +1540,14 @@ sezimtaldyq
 sezuu
 shabuu
 shabyt
+shaghala
 shaghuu
 shaghym
 shaghymdanuu
 shagnghy
 shagnyraq
 shalbar
+shalghy
 shaluu
 shanyshqy
 shaq
@@ -1512,6 +1566,7 @@ sheshim
 sheshimdi
 sheshuu
 shil
+shildehana
 shjqyldauu
 shomyluu
 shoq
@@ -1519,6 +1574,7 @@ shoshuu
 shoshytuu
 shugnqyr
 shulyq
+shuoimele
 shuoimish
 shuoip
 shuuaq
@@ -1529,6 +1585,7 @@ shygharuushy
 shyghuu
 shyghys
 shygnyrauu
+shym
 shymshyq
 shyny
 shyrsha
@@ -1540,9 +1597,11 @@ sojuu
 soqa
 soruu
 sozuu
+sugnqar
 suijek
 suilgi
 suilikten
+suimbil
 suit
 suoindiruu
 suoindiruushi
@@ -1556,6 +1615,7 @@ suryptauu
 suu
 suusar
 sybyrlauu
+sybyzghy
 syj
 syjlastyq
 syjlauu
@@ -1588,7 +1648,9 @@ tagndauu
 tairbje
 taiuuir
 taizhirjbe
+taj
 tajaq
+tajynsha
 tal
 talaby
 talap
@@ -1612,6 +1674,7 @@ tarjh
 tarmaghaj
 tartuu
 tary
+tasbaqa
 tasuu
 tasymaldauu
 tatqyzuu
@@ -1623,6 +1686,8 @@ tegene
 tegisteuu
 tegnge
 tegniz
+teke
+tel
 temir
 tereze
 teri
@@ -1651,14 +1716,18 @@ toqtauu
 toquu
 tor
 torghaj
+torsyq
 tostaghan
 tozuu
+tughyr
+tuibit
 tuije
 tuijequs
 tuijme
 tuikiruu
 tuilik
 tuilki
+tuindik
 tuip
 tuisinuu
 tuisiruu
@@ -1685,6 +1754,7 @@ turys
 tutuu
 tuuuu
 tuz
+tuzaq
 tuzhyrymdama
 tyghuu
 tygndauu
@@ -1696,6 +1766,7 @@ tyrysuu
 uideris
 uigngir
 uijlesim
+uijme
 uijrek
 uijrenuu
 uiki
@@ -1707,6 +1778,7 @@ uin
 uirleuu
 uitik
 uja
+ujagn
 ujaluu
 ujgharym
 ujyqtatuu
@@ -1747,6 +1819,8 @@ uoirik
 uoiris
 uoirkendeuu
 uoirleuu
+uoirmek
+uoirmekshi
 uoirnek
 uoirshil
 uoirt
@@ -1786,6 +1860,7 @@ ustauu
 usynys
 uulauu
 yqylas
+yryq
 yrys
 zaghjp
 zagn
@@ -1822,6 +1897,7 @@ zertteme
 zertteuu
 zertteuulik
 zertteuushi
+zhabaghy
 zhabdyqtauu
 zhabuu
 zhadaghaj
@@ -1845,6 +1921,7 @@ zhagnashyl
 zhagnashyldyq
 zhagnbyr
 zhagnghyryq
+zhagnqa
 zhahan
 zhahandyq
 zhaidiger
@@ -2123,6 +2200,7 @@ zhuizuu
 zhuldyz
 zhuldyzdy
 zhuldyznamalyq
+zhuldyzqurt
 zhulqynuu
 zhuluu
 zhumbaq
@@ -2130,6 +2208,7 @@ zhumsaq
 zhumsaqtyq
 zhumsartuu
 zhumyluu
+zhumyr
 zhumyrtqa
 zhumys
 zhumysker
@@ -2157,6 +2236,7 @@ zhylauu
 zhyldam
 zhyldamdyq
 zhyldar
+zhylgha
 zhylnama
 zhylqy
 zhyluu
