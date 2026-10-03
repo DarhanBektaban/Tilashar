@@ -184,6 +184,7 @@ ana
 analyq
 anar
 ant
+anyqtama
 anyqtauu
 apa
 apaly
@@ -567,6 +568,7 @@ buruu
 buryluu
 burylys
 burysh
+buryshtama
 buta
 butaq
 buzuushylyq
@@ -699,6 +701,7 @@ enzhar
 enzharlyq
 er
 erekshelik
+erezhe
 erezhesiz
 ergezhejli
 erik
@@ -772,6 +775,8 @@ ghylym
 ghylymj
 guildenuu
 guildeuu
+hatshy
+hattama
 irikteuu
 is
 jbaly
@@ -792,15 +797,18 @@ jt
 jtajaq
 jteruu
 kairi
+kelisim
 kelisimshart
 kelisuu
 keluu
 keluui
 kemsituu
+kepil
 keshiguu
 kesuu
 ketuu
 kirgizuu
+kiris
 kiruu
 kitap
 kjindiruu
@@ -829,6 +837,9 @@ kuoishiruu
 kuoishuu
 kuoiteruu
 kuoizdeuu
+kuuaiger
+kuuailik
+lauuazym
 maghyna
 magnaj
 magndaj
@@ -840,7 +851,9 @@ mahabbat
 maidenjet
 maigngi
 maigngilik
+mailimdeme
 mailimet
+maimile
 main
 maindi
 mainer
@@ -904,6 +917,8 @@ munaj
 munajshy
 muoildir
 muoilsher
+muoir
+muoirtaban
 muqtazh
 mura
 murager
@@ -933,6 +948,7 @@ nuoiser
 nur
 nurly
 nusqa
+nusqauulyq
 nyq
 nyqtalghan
 nysan
@@ -1221,6 +1237,7 @@ qutqaruu
 quuat
 quuuu
 quzhat
+quzyret
 qydyruu
 qylysh
 qymbat
@@ -1290,6 +1307,7 @@ salqyndyq
 salt
 saltanat
 saluu
+salym
 salyq
 sana
 sanasuu
@@ -1300,6 +1318,7 @@ sapar
 saq
 saqjna
 saqtan
+saqtandyruu
 saqtauu
 saqtyq
 sarapshy
@@ -1339,6 +1358,7 @@ sezuu
 shabuu
 shabyt
 shaghuu
+shaghym
 shaghymdanuu
 shagnyraq
 shaluu
@@ -1362,6 +1382,7 @@ shuuaq
 shygharuu
 shygharuushy
 shyghuu
+shyghys
 signlili
 sjpauu
 soghuu
@@ -1420,6 +1441,7 @@ tamyrly
 tanuu
 tanystyruu
 tanysuu
+tapsyrma
 taratuu
 tarauu
 tarjh
@@ -1462,7 +1484,10 @@ tuoignkeruu
 tuoiguu
 tuoiletkizuu
 tuoileuu
+tuoilquzhat
 tuoimendeuu
+tuoiragha
+tuoirelik
 tuoizim
 tuoizuu
 turghyzuu
@@ -1472,6 +1497,7 @@ turuu
 turys
 tutuu
 tuuuu
+tuzhyrymdama
 tyghuu
 tygndauu
 tyrnauu
@@ -1479,12 +1505,14 @@ tyrysuu
 uideris
 uijlesim
 uijrenuu
+uikim
 uilesim
 uilgi
 uimit
 uin
 uirleuu
 ujaluu
+ujgharym
 ujyqtatuu
 ujyqtauu
 ulasuu
@@ -1492,6 +1520,7 @@ ulyqtauu
 uoigiz
 uoikil
 uoikilettik
+uoikim
 uoikinishti
 uoikinuu
 uoikpe
@@ -1528,9 +1557,11 @@ uoirt
 uoishiruu
 uoisim
 uoisimdik
+uoisimpul
 uoisiruu
 uoiskin
 uoisuu
+uoitemaqy
 uoitinish
 uoitirik
 uoitirikshi
@@ -1580,6 +1611,7 @@ zauual
 zejin
 zejindi
 zejindilik
+zejnetaqy
 zejnetker
 zerde
 zerdeli
@@ -1618,6 +1650,7 @@ zhahandyq
 zhaidiger
 zhaindik
 zhairdem
+zhairdemaqy
 zhaishik
 zhaj
 zhajdary
@@ -1732,6 +1765,7 @@ zhattyqtyruu
 zhatuu
 zhauu
 zhauuap
+zhauuapker
 zhauuapkershilik
 zhauuapty
 zhauugershilik
