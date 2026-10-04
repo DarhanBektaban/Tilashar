@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tilashar — Sóz Dybystau</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #131b2e;
+      --primary: #38bdf8;
+      --accent: #f59e0b;
+      --text: #f8fafc;
+      --muted: #64748b;
+      --border: #334155;
+      --error: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 1.5rem; }
+    .wrapper { max-width: 650px; width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { font-size: 2.3rem; color: var(--primary); letter-spacing: 2px; margin-bottom: 0.3rem; }
+    p.sub { color: var(--muted); font-size: 0.95rem; }
+    
+    .input-box { margin-bottom: 1.2rem; }
+    input[type="text"] {
+      width: 100%;
+      background: #090d16;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      font-size: 1.25rem;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus { border-color: var(--primary); }
+
+    .btn-row { display: flex; gap: 12px; margin-bottom: 1.5rem; }
+    button {
+      flex: 1;
+      padding: 0.9rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    button:active { transform: scale(0.98); }
+    .btn-play { background: var(--primary); color: #090d16; }
+    .btn-play:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-stop { background: var(--border); color: #fff; }
+
+    .status-area {
+      min-height: 70px;
+      background: #090d16;
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .word-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: #1e293b;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 1.15rem;
+      transition: all 0.2s ease;
+    }
+    .word-badge.active {
+      background: var(--accent);
+      color: #090d16;
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+    }
+    .word-badge.missing {
+      background: #3f181c;
+      color: var(--error);
+      text-decoration: line-through;
+    }
+
+    .sample-section { margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+    .sample-section p { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      background: #1e293b;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--primary);
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .badge:hover { border-color: var(--primary); background: #172554; }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <header>
+    <h1>TILASHAR</h1>
+    <p class="sub">Darhan Bektaban Ailippesi — Sóz Dybystau</p>
+  </header>
+
+  <div class="input-box">
+    <input type="text" id="wordInput" placeholder="Sóz nemese sóilem zhazyngyz..." autofocus>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn-play" id="playBtn">▶ Dybystau</button>
+    <button class="btn-stop" id="stopBtn">■ Toqtatu</button>
+  </div>
+
+  <div class="status-area" id="displayBox">
+    <span style="color: var(--muted); font-size: 0.95rem;">Sóz zhazyp, "Dybystau" batymasyn basyngyz</span>
+  </div>
+
+  <div class="sample-section">
+    <p>Mysaldar:</p>
+    <div class="badges">
+      <span class="badge" onclick="setWord('uoimir')">uoimir</span>
+      <span class="badge" onclick="setWord('uoimir shengberi')">uoimir shengberi</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  // GitHub Raw siltemesi
+  const AUDIO_BASE = "https://raw.githubusercontent.com/DarhanBektaban/Tilashar/main/audio/";
+
+  /**
+   * Sózge saikes audio mekenzhajyn qūru:
+   * Mysaly: 'uoimir' -> audio/u/o/uoimir.mp3
+   */
+  function getWordAudioUrl(word) {
+    const clean = word.toLowerCase().replace(/[^a-z]/g, '');
+    if (clean.length === 0) return null;
+
+    let p1 = clean[0];
+    let p2 = clean.length > 1 ? clean[1] : clean[0]; // eger bir daryp bolsa ozin qajtalaidy
+
+    return `${AUDIO_BASE}${p1}/${p2}/${clean}.mp3`;
+  }
+
+  let isPlaying = false;
+  let currentAudio = null;
+
+  async function playWordAudio(word, el) {
+    return new Promise((resolve) => {
+      const url = getWordAudioUrl(word);
+      if (!url) {
+        resolve();
+        return;
+      }
+
+      currentAudio = new Audio(url);
+
+      currentAudio.onended = () => {
+        if (el) el.classList.remove('active');
+        resolve();
+      };
+
+      currentAudio.onerror = () => {
+        console.warn(`Audio tabylmady: ${url}`);
+        if (el) {
+          el.classList.remove('active');
+          el.classList.add('missing');
+        }
+        setTimeout(resolve, 300);
+      };
+
+      currentAudio.play().catch(err => {
+        console.warn(`Oinatu qatesi (${word}):`, err);
+        if (el) el.classList.remove('active');
+        resolve();
+      });
+    });
+  }
+
+  const wordInput = document.getElementById('wordInput');
+  const displayBox = document.getElementById('displayBox');
+  const playBtn = document.getElementById('playBtn');
+  const stopBtn = document.getElementById('stopBtn');
+
+  function renderWords(words) {
+    displayBox.innerHTML = '';
+    words.forEach((w, idx) => {
+      const span = document.createElement('span');
+      span.className = 'word-badge';
+      span.id = `word-${idx}`;
+      span.innerText = w;
+      displayBox.appendChild(span);
+    });
+  }
+
+  async function playSequence() {
+    if (isPlaying) return;
+    const text = wordInput.value.trim();
+    if (!text) return;
+
+    // Sózderge bólip alu
+    const words = text.split(/\s+/).filter(w => w.length > 0);
+    renderWords(words);
+
+    isPlaying = true;
+    playBtn.disabled = true;
+
+    for (let i = 0; i < words.length; i++) {
+      if (!isPlaying) break;
+
+      const el = document.getElementById(`word-${i}`);
+      if (el) el.classList.add('active');
+
+      await playWordAudio(words[i], el);
+      
+      // Sózder arasyndaghy qysqa pauza (200ms)
+      await new Promise(r => setTimeout(r, 200));
+    }
+
+    isPlaying = false;
+    playBtn.disabled = false;
+  }
+
+  function stopSequence() {
+    isPlaying = false;
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+    document.querySelectorAll('.word-badge').forEach(el => el.classList.remove('active'));
+    playBtn.disabled = false;
+  }
+
+  function setWord(w) {
+    wordInput.value = w;
+    playSequence();
+  }
+
+  playBtn.addEventListener('click', playSequence);
+  stopBtn.addEventListener('click', stopSequence);
+  wordInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') playSequence();
+  });
+</script>
+
+</body>
+</html>
