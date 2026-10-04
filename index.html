@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tilashar — Dybystaluy</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #131b2e;
+      --primary: #38bdf8;
+      --accent: #f59e0b;
+      --text: #f8fafc;
+      --muted: #64748b;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 1.5rem; }
+    .wrapper { max-width: 680px; width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { font-size: 2.4rem; color: var(--primary); letter-spacing: 2px; margin-bottom: 0.3rem; }
+    p.sub { color: var(--muted); font-size: 0.95rem; }
+    
+    .input-box { margin-bottom: 1.2rem; }
+    input[type="text"] {
+      width: 100%;
+      background: #090d16;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      font-size: 1.3rem;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus { border-color: var(--primary); }
+
+    .btn-row { display: flex; gap: 12px; margin-bottom: 1.5rem; }
+    button {
+      flex: 1;
+      padding: 0.9rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-play { background: var(--primary); color: #090d16; }
+    .btn-play:disabled { opacity: 0.6; cursor: not-allowed; }
+    .btn-stop { background: var(--border); color: #fff; }
+
+    .status-area {
+      min-height: 64px;
+      background: #090d16;
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .token {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      height: 38px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: #1e293b;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.15s ease;
+    }
+    .token.active {
+      background: var(--accent);
+      color: #090d16;
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+    }
+    .sample-section { margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+    .sample-section p { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      background: #1e293b;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--primary);
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .badge:hover { border-color: var(--primary); background: #172554; }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <header>
+    <h1>TILASHAR</h1>
+    <p class="sub">Darhan Bektaban Ailippesi — Sóz Dybystau Qūraly</p>
+  </header>
+
+  <div class="input-box">
+    <input type="text" id="wordInput" placeholder="Sóz zhazyngyz (mysaly: aghash, uoim, qazaq)..." autofocus>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn-play" id="playBtn">▶ Dybystau</button>
+    <button class="btn-stop" id="stopBtn">■ Toqtatu</button>
+  </div>
+
+  <div class="status-area" id="displayBox">
+    <span style="color: var(--muted); font-size: 0.95rem;">Terilgen sóz osynda dybystalyp kórinedi</span>
+  </div>
+
+  <div class="sample-section">
+    <p>Mysaldar:</p>
+    <div class="badges">
+      <span class="badge" onclick="setWord('aghash')">aghash</span>
+      <span class="badge" onclick="setWord('uoim')">uoim</span>
+      <span class="badge" onclick="setWord('tilashar')">tilashar</span>
+      <span class="badge" onclick="setWord('qazaq')">qazaq</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const AUDIO_BASE = "https://raw.githubusercontent.com/DarhanBektaban/Tilashar/main/audio/";
+
+  const TOKENS = [
+    "uoi",                    // Trigraf
+    "ai", "gh", "gn", "sh",   // Digraftar
+    "ui", "uu", "zh", "ch",
+    "a", "b", "c", "d", "e",  // Darypter
+    "f", "g", "h", "i", "j", 
+    "k", "l", "m", "n", "o", 
+    "p", "q", "r", "s", "t", 
+    "u", "v", "w", "x", "y", "z"
+  ];
+
+  // Bir airiptik qaltashalargha sajkes url qūru
+  function getAudioUrl(token) {
+    if (token.length === 1) {
+      // a -> a/a/aa.mp3
+      return `${AUDIO_BASE}${token}/${token}/${token}${token}.mp3`;
+    }
+    if (token.length === 2) {
+      // gh -> g/h/gh.mp3 nemese g/h/ghgh.mp3
+      return `${AUDIO_BASE}${token[0]}/${token[1]}/${token}.mp3`;
+    }
+    if (token.length === 3) {
+      // uoi -> u/o/uoi.mp3
+      return `${AUDIO_BASE}${token[0]}/${token[1]}/${token}.mp3`;
+    }
+    return `${AUDIO_BASE}${token}.mp3`;
+  }
+
+  function tokenize(text) {
+    let lower = text.toLowerCase().trim();
+    let tokens = [];
+    let i = 0;
+
+    while (i < lower.length) {
+      if (lower[i] === ' ') {
+        tokens.push(' ');
+        i++;
+        continue;
+      }
+
+      let match3 = lower.substr(i, 3);
+      if (TOKENS.includes(match3)) {
+        tokens.push(match3);
+        i += 3;
+        continue;
+      }
+
+      let match2 = lower.substr(i, 2);
+      if (TOKENS.includes(match2)) {
+        tokens.push(match2);
+        i += 2;
+        continue;
+      }
+
+      let match1 = lower.substr(i, 1);
+      tokens.push(match1);
+      i += 1;
+    }
+    return tokens;
+  }
+
+  let isPlaying = false;
+  let currentAudio = null;
+
+  async function playSound(token) {
+    return new Promise((resolve) => {
+      if (token === ' ') {
+        setTimeout(resolve, 300);
+        return;
+      }
+
+      const audioUrl = getAudioUrl(token);
+      currentAudio = new Audio(audioUrl);
+
+      currentAudio.onended = () => resolve();
+      currentAudio.onerror = () => {
+        // Eger fail aty qaitalanyp tursa (mysaly ghgh.mp3), qosalqy tekseru
+        if (token.length === 2) {
+          const fallbackUrl = `${AUDIO_BASE}${token[0]}/${token[1]}/${token}${token}.mp3`;
+          const fbAudio = new Audio(fallbackUrl);
+          fbAudio.onended = () => resolve();
+          fbAudio.onerror = () => {
+            console.warn(`Tabylmady: ${audioUrl}`);
+            setTimeout(resolve, 150);
+          };
+          fbAudio.play().catch(() => resolve());
+          return;
+        }
+
+        console.warn(`Tabylmady: ${audioUrl}`);
+        setTimeout(resolve, 150);
+      };
+
+      currentAudio.play().catch(err => {
+        console.warn(`Audio qatesi (${token}):`, err);
+        resolve();
+      });
+    });
+  }
+
+  const wordInput = document.getElementById('wordInput');
+  const displayBox = document.getElementById('displayBox');
+  const playBtn = document.getElementById('playBtn');
+  const stopBtn = document.getElementById('stopBtn');
+
+  function renderTokens(tokens) {
+    displayBox.innerHTML = '';
+    tokens.forEach((t, idx) => {
+      const span = document.createElement('span');
+      span.className = 'token';
+      span.id = `token-${idx}`;
+      span.innerText = t === ' ' ? '␣' : t;
+      displayBox.appendChild(span);
+    });
+  }
+
+  async function playSequence() {
+    if (isPlaying) return;
+    const text = wordInput.value;
+    if (!text.trim()) return;
+
+    const tokens = tokenize(text);
+    renderTokens(tokens);
+
+    isPlaying = true;
+    playBtn.disabled = true;
+
+    for (let i = 0; i < tokens.length; i++) {
+      if (!isPlaying) break;
+
+      const el = document.getElementById(`token-${i}`);
+      if (el) el.classList.add('active');
+
+      await playSound(tokens[i]);
+
+      if (el) el.classList.remove('active');
+    }
+
+    isPlaying = false;
+    playBtn.disabled = false;
+  }
+
+  function stopSequence() {
+    isPlaying = false;
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+    document.querySelectorAll('.token').forEach(el => el.classList.remove('active'));
+    playBtn.disabled = false;
+  }
+
+  function setWord(w) {
+    wordInput.value = w;
+    playSequence();
+  }
+
+  playBtn.addEventListener('click', playSequence);
+  stopBtn.addEventListener('click', stopSequence);
+  wordInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') playSequence();
+  });
+</script>
+
+</body>
+</html>
