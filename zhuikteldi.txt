@@ -343,6 +343,7 @@ aryz
 arzan
 arzandyq
 arzanshylyq
+as
 asadal
 asatajaq
 asatuu
@@ -365,6 +366,7 @@ aspap
 aspaz
 asqabaq
 asqaqtauu
+asqazan
 astauu
 astyq
 astyrtyndyq
@@ -1041,6 +1043,7 @@ emen
 emhana
 emizuu
 emshi
+emtjhan
 en
 endi
 endigi
@@ -1151,6 +1154,7 @@ guildeuu
 guirsil
 hal
 han
+hat
 hatshy
 hattama
 ignirde
@@ -1209,6 +1213,7 @@ kebis
 kebuu
 kedir
 kegn
+kegnse
 kejde
 kejin
 kek
@@ -1239,6 +1244,7 @@ kergjuu
 keriluu
 kermek
 keruuen
+keruuet
 kes
 kese
 kesh
@@ -1629,6 +1635,7 @@ oraluu
 oramal
 oraq
 orauu
+ordasy
 orman
 ormanshy
 ornatuu
@@ -1639,6 +1646,7 @@ oryn
 orynbasar
 oryndauu
 oryndy
+oryndyq
 orynsyz
 oshaq
 osy
@@ -1671,6 +1679,7 @@ perde
 perzent
 pikir
 pikirtalas
+pil
 pish
 pishin
 pishpe
@@ -1874,6 +1883,7 @@ qaruulandyruu
 qaruuly
 qaryn
 qaryndas
+qaryndash
 qaryq
 qaryz
 qaryzdar
@@ -2165,6 +2175,7 @@ qyzylkuoiz
 qyzylsha
 qyzyq
 raj
+rajy
 raqat
 raqmet
 raqymdy
@@ -2181,6 +2192,7 @@ rjzyq
 ruuh
 ruuhanj
 saba
+sabaq
 sabauu
 sabyn
 sabyr
@@ -2490,6 +2502,7 @@ shyny
 shyq
 shyraj
 shyrghanaq
+shyrpy
 shyrsha
 signbir
 signir
@@ -2631,6 +2644,7 @@ syrtqy
 syrttaj
 syz
 syzdanuu
+syzghysh
 syzuu
 tabaldyryq
 taban
@@ -2791,6 +2805,7 @@ tobylghy
 toghyn
 toghyz
 tognazuu
+tognazytqysh
 tognmojyn
 tojdyruu
 tojuu
@@ -2829,6 +2844,7 @@ tory
 tosap
 tostaghan
 tosuu
+tozagn
 tozuu
 tughyr
 tuibek
@@ -2978,6 +2994,7 @@ uirleuu
 uish
 uishkir
 uiskirik
+uistel
 uitik
 uizdiksiz
 uizegngi
@@ -3063,6 +3080,7 @@ uoirt
 uoiruu
 uoish
 uoishir
+uoishirgish
 uoishiruu
 uoisim
 uoisimdik
@@ -3596,6 +3614,7 @@ zhuuas
 zhuusan
 zhuusatuu
 zhuuuu
+zhuuynatyn
 zhyghuu
 zhyghyl
 zhygnghyl
