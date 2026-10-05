@@ -913,6 +913,7 @@ daiuuir
 daiuuirleuu
 daiuulet
 daiuuletti
+dajyndaluu
 dajyndauu
 dajyndyqty
 dala
@@ -943,6 +944,7 @@ degdar
 degngej
 degngejli
 demal
+demaluu
 demalys
 demdeuu
 demdeuuish
@@ -1153,6 +1155,7 @@ guildenuu
 guildeuu
 guirsil
 hal
+halyq
 han
 hat
 hatshy
@@ -1172,6 +1175,7 @@ ishik
 ishpek
 ishuu
 isteuu
+izdeuu
 izet
 jai
 jba
@@ -1213,6 +1217,7 @@ kebis
 kebuu
 kedir
 kegn
+kegnes
 kegnse
 kejde
 kejin
@@ -1276,6 +1281,7 @@ kishilik
 kisilik
 kitap
 kjik
+kjim
 kjindiruu
 kjinuu
 kjit
@@ -1308,6 +1314,7 @@ kuilaipara
 kuildir
 kuildireuuish
 kuildiruu
+kuilgin
 kuilimdeuu
 kuilki
 kuilshe
@@ -1315,6 +1322,7 @@ kuiluu
 kuimain
 kuimis
 kuin
+kuindelikti
 kuinikeshe
 kuinuzaqqa
 kuipi
@@ -1357,6 +1365,7 @@ kuoil
 kuoilegejleuu
 kuoilshik
 kuoimek
+kuoimektesuu
 kuoimir
 kuoimuu
 kuoinbis
@@ -2020,6 +2029,7 @@ qorghanuu
 qorghasyn
 qorghauu
 qorlauu
+qorquu
 qorqynysh
 qorqyra
 qorshauu
@@ -2113,6 +2123,8 @@ qut
 qutqaruu
 qutyluu
 quu
+quuanuu
+quuanysh
 quuat
 quuuu
 quuyruu
@@ -2188,6 +2200,7 @@ renzhuu
 resmj
 retteuu
 rettik
+rjzashylyq
 rjzyq
 ruuh
 ruuhanj
@@ -2343,6 +2356,7 @@ senimdi
 senimdilik
 senimsiz
 senimsizdik
+senuu
 sergek
 sergeldegn
 seri
@@ -2653,6 +2667,7 @@ tabanbalyq
 tabaq
 tabaqsha
 tabjghat
+tabuu
 tabys
 tagha
 taghan
@@ -2985,6 +3000,7 @@ uilestir
 uilgi
 uilken
 uimit
+uimittenuu
 uin
 uinde
 uir
@@ -3025,6 +3041,7 @@ uoigiz
 uoikil
 uoikilettik
 uoikim
+uoikinish
 uoikinishti
 uoikinuu
 uoikir
@@ -3107,6 +3124,7 @@ uoizekti
 uoizen
 uoizge
 uoizgeris
+uoizgeruu
 uoizhet
 uoizhettik
 uq
@@ -3123,6 +3141,7 @@ urysuu
 usaq
 ushqalaq
 ushqyr
+ushqysh
 ushuu
 usta
 ustauu
