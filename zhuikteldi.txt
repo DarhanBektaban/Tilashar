@@ -101,6 +101,7 @@ ainshi
 ainshilik
 ainuran
 aip
+aipke
 aipsana
 air
 airbir
@@ -687,6 +688,7 @@ bilimsiz
 bilinbes
 biliner
 bilte
+biluu
 bir
 birbetkej
 birdej
@@ -742,6 +744,7 @@ bojy
 bojynsha
 bojzhetken
 bojzhetuu
+bol
 bolashaq
 bolat
 bolmys
@@ -1142,6 +1145,7 @@ ghulama
 ghumyr
 ghylym
 ghylymj
+guil
 guildenuu
 guildeuu
 guirsil
@@ -1162,7 +1166,10 @@ ish
 ishek
 ishik
 ishpek
+ishuu
+isteuu
 izet
+jai
 jba
 jbaly
 je
@@ -1237,6 +1244,7 @@ kese
 kesh
 keshe
 keshiguu
+keshirigniz
 keshqurym
 kesirtke
 keskin
@@ -1314,6 +1322,7 @@ kuirkir
 kuirsinis
 kuirsinuu
 kuirtik
+kuishti
 kuit
 kuituu
 kuiz
@@ -1588,6 +1597,7 @@ ojly
 ojmaq
 ojmauuysh
 ojnaqy
+ojnauu
 ojpat
 ojshyl
 ojuushy
@@ -1750,6 +1760,7 @@ qajyrymdylyq
 qala
 qalaj
 qalajsha
+qalajsygn
 qalajy
 qalalyq
 qalam
@@ -1800,6 +1811,7 @@ qandas
 qandy
 qanqyz
 qansha
+qant
 qanzhar
 qap
 qaper
@@ -1984,6 +1996,7 @@ qoluoiner
 qolzhazba
 qomaghaj
 qon
+qonaquij
 qondyruu
 qonuu
 qonys
@@ -2153,6 +2166,7 @@ qyzylsha
 qyzyq
 raj
 raqat
+raqmet
 raqymdy
 rastauu
 razylyq
@@ -2566,6 +2580,7 @@ suuaruu
 suulyq
 suuretshi
 suusar
+suusyn
 suuyq
 suuyr
 suuyrylyp
@@ -3057,6 +3072,7 @@ uoisjet
 uoiskin
 uoisuu
 uoitemaqy
+uoitinemin
 uoitinish
 uoitirik
 uoitirikshi
